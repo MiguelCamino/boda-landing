@@ -32,17 +32,24 @@
             align-items: center;
             color: white;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-        }
-        .header h1 {
-            font-size: 3rem;
-        }
-        .header p {
-            font-size: 1.5rem;
+            font-family: "Marcellus", serif;
+            font-size: 92px;
+            line-height: 132px;
+            padding-bottom: 16px;
+            text-transform: capitalize;
+            white-space: nowrap;
         }
         
         /* Contenedor del contador */
         .contador-container {
-            margin-top: 50px;
+            background-color: #FAF0FF;
+            position: absolute;
+            left: 50%;
+            bottom: -34%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            padding: 40px 145px 44px 145px;
         }
         .contador-titulo {
             font-size: 2rem;
@@ -57,7 +64,7 @@
         .contador-box {
             width: 100px;
             height: 100px;
-            background-color: #FAF0FF;
+            background-color: white;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -107,6 +114,12 @@
                 <div class="contador-label">Segundos</div>
             </div>
         </div>
+    </div>
+    
+    <div class="mapas">
+        <h2>Ubicación de la ceremonia y banquete</h2>
+        <iframe src="https://www.google.com/maps/embed?..." width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/embed?..." width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
 
     <script>
