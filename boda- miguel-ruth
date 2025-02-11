@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Boda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .qr {
+            width: 100px;
+        }
+        input, select, button {
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Nos Casamos!</h1>
+        <p><strong>Fecha:</strong> 15 de Junio de 2025</p>
+        <p><strong>Lugar Ceremonia:</strong> Iglesia San Pedro</p>
+        <img class="qr" src="qr-ceremonia.png" alt="QR Ubicación Ceremonia">
+        <p><strong>Lugar Banquete:</strong> Hotel Paraíso</p>
+        <img class="qr" src="qr-banquete.png" alt="QR Ubicación Banquete">
+        <p>¡Habrá parking gratuito!</p>
+        
+        <h2>Confirma tu asistencia</h2>
+        <form>
+            <input type="text" placeholder="Tu Nombre" required>
+            <select required>
+                <option value="">Elige tu plato principal</option>
+                <option value="carne">Carne</option>
+                <option value="pescado">Pescado</option>
+                <option value="vegetariano">Vegetariano</option>
+            </select>
+            <input type="text" placeholder="Intolerancias Alimentarias">
+            <button type="submit">Confirmar Asistencia</button>
+        </form>
+        
+        <h2>Sube tus fotos</h2>
+        <p>Comparte tus fotos del evento en nuestro álbum colaborativo.</p>
+        <a href="#">Subir Fotos</a>
+    </div>
+</body>
+</html>
