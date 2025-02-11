@@ -5,23 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Boda - Miguel & Ruth</title>
     <style>
-        /* Estilos generales */
+        /* Reset y estilos universales */
+        a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            vertical-align: baseline;
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f9f9f9;
         }
-        
+
         /* Cabecera */
         header {
             position: relative;
             text-align: center;
             color: white;
+            width: 100%;
         }
         
         header img {
             width: 100%;
-            height: 500px;
+            height: auto;
             object-fit: cover;
         }
         
@@ -30,7 +40,7 @@
             top: 30%;
             left: 50%;
             transform: translateX(-50%);
-            font-size: 48px;
+            font-size: 5vw;
             margin: 0;
         }
         
@@ -39,7 +49,7 @@
             top: 45%;
             left: 50%;
             transform: translateX(-50%);
-            font-size: 24px;
+            font-size: 3vw;
         }
 
         header h3 {
@@ -47,59 +57,87 @@
             top: 55%;
             left: 50%;
             transform: translateX(-50%);
-            font-size: 20px;
+            font-size: 2.5vw;
         }
-        
+
         /* Estilo del contador */
         .countdown {
             background-color: #FAF0FF;
             position: absolute;
             left: 50%;
-            bottom: -34%;
+            bottom: -30%;
             transform: translate(-50%, -50%);
-            padding: 40px 145px 44px 145px;
+            padding: 4vw 10vw;
             text-align: center;
             border-radius: 10px;
-            font-size: 36px;
+            font-size: 5vw;
         }
 
         /* Sección Historia */
         .history {
             text-align: center;
-            margin: 50px 0;
+            margin: 10vw 5vw;
         }
 
         .history img {
             width: 100%;
-            max-width: 500px;
+            max-width: 400px;
             border-radius: 10px;
+        }
+
+        .history h2 {
+            font-size: 4vw;
+        }
+
+        .history p {
+            font-size: 3.2vw;
+            line-height: 1.5;
         }
 
         /* Sección Mapa */
         .map-container {
-            margin: 50px 0;
+            margin: 10vw 0;
             text-align: center;
         }
-        
-        /* Sección Confirmación */
+
+        /* Formulario para confirmar asistencia */
         .form-container {
-            margin: 50px;
+            margin: 10vw 5vw;
             text-align: center;
         }
 
         .form-container input, .form-container select {
-            padding: 10px;
-            margin: 10px;
+            padding: 1.5vw;
+            margin: 2vw;
             width: 80%;
             max-width: 400px;
+            border-radius: 5px;
+            font-size: 3vw;
         }
 
-        /* Estilo de la galería */
+        .form-container input[type="submit"] {
+            background-color: #FAF0FF;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #d8b9ff;
+        }
+
+        /* Galería de fotos */
+        .gallery-container {
+            margin: 10vw 0;
+            text-align: center;
+        }
+
+        /* Layout de galería */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 10px;
-            margin: 50px 0;
+            padding: 0 5vw;
         }
 
         .gallery img {
@@ -108,21 +146,54 @@
             border-radius: 10px;
         }
 
-        /* Pestaña de fotos */
-        .gallery-container {
-            margin: 50px 0;
+        /* Media Queries para dispositivos pequeños */
+        @media (max-width: 768px) {
+            header h1, header h2, header h3 {
+                font-size: 10vw;
+            }
+
+            .countdown {
+                padding: 6vw 12vw;
+                font-size: 8vw;
+            }
+
+            .history img {
+                max-width: 90%;
+            }
+
+            .form-container input, .form-container select {
+                font-size: 4vw;
+                width: 90%;
+            }
+
+            .gallery-container h2 {
+                font-size: 5vw;
+            }
         }
 
-        .tablinks {
-            padding: 10px;
-            cursor: pointer;
-            background-color: #f1f1f1;
-            border: none;
-            font-size: 18px;
-        }
+        /* Media Queries para dispositivos móviles */
+        @media (max-width: 480px) {
+            header h1, header h2, header h3 {
+                font-size: 12vw;
+            }
 
-        .tablinks:hover {
-            background-color: #ddd;
+            .countdown {
+                padding: 8vw 15vw;
+                font-size: 10vw;
+            }
+
+            .history img {
+                max-width: 90%;
+            }
+
+            .form-container input, .form-container select {
+                font-size: 5vw;
+                width: 100%;
+            }
+
+            .gallery-container h2 {
+                font-size: 6vw;
+            }
         }
     </style>
 </head>
@@ -155,12 +226,6 @@
         <div id="map"></div>
     </section>
 
-    <!-- Mapa del Banquete -->
-    <section class="map-container">
-        <h2>Mapa del Banquete</h2>
-        <div id="banquet-map"></div>
-    </section>
-
     <!-- Formulario para confirmar asistencia -->
     <section class="form-container">
         <h2>Confirma tu asistencia</h2>
@@ -178,8 +243,7 @@
     <!-- Galería de fotos -->
     <section class="gallery-container">
         <h2>Galería de fotos</h2>
-        <button class="tablinks" onclick="openGallery(event, 'galeria')">Ver fotos</button>
-        <div id="galeria" class="gallery" style="display:none;">
+        <div class="gallery">
             <img src="foto1.jpg" alt="Foto 1">
             <img src="foto2.jpg" alt="Foto 2">
             <!-- Más fotos -->
