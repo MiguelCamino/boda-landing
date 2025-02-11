@@ -85,6 +85,21 @@
         </div>
     </section>
 
+    <!-- Sección Fotos -->
+    <section id="fotos" class="container my-5">
+        <h2 class="text-center">¡Comparte tus Fotos!</h2>
+        <p>Aquí puedes subir las fotos que tomes durante nuestra boda. ¡Nos encantaría verlas!</p>
+
+        <!-- Formulario para cargar fotos -->
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="foto" class="form-label">Selecciona una foto</label>
+                <input type="file" class="form-control" id="foto" name="foto" accept="image/*" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Subir Foto</button>
+        </form>
+    </section>
+
     <!-- Sección Confirmación -->
     <section id="confirmacion" class="container my-5">
         <h2 class="text-center">Confirmación de Asistencia</h2>
@@ -92,14 +107,25 @@
         <form>
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre Completo</label>
-                <input type="text" class="form-control" id="nombre" placeholder="Tu nombre">
+                <input type="text" class="form-control" id="nombre" placeholder="Tu nombre" required>
             </div>
             <div class="mb-3">
                 <label for="asistencia" class="form-label">¿Asistirás?</label>
-                <select class="form-select" id="asistencia">
+                <select class="form-select" id="asistencia" required>
                     <option value="si">Sí</option>
                     <option value="no">No</option>
                     <option value="talvez">Tal vez</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="alergias" class="form-label">Intolerancias o Alergias</label>
+                <textarea class="form-control" id="alergias" rows="3" placeholder="Escribe tus intolerancias o alergias alimentarias, si las tienes."></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="plato" class="form-label">Plato Principal</label>
+                <select class="form-select" id="plato" required>
+                    <option value="carne">Carne</option>
+                    <option value="pescado">Pescado</option>
                 </select>
             </div>
             <button type="submit" class="btn btn-primary">Confirmar</button>
