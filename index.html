@@ -68,11 +68,128 @@
     </header>
 
     <!-- Sección Contador -->
-    <section id="welcome">
-        <h1>¡Nos Casamos!</h1>
-        <p>¡Nos gustaría compartir este momento tan especial con ustedes! Nuestra boda será el 05 de julio de 2025.</p>
-        <div id="countdown"></div>
-    </section>
+    <title>Cuenta atrás para la boda</title>
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #fafafa;
+            color: #615869;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Contenedor principal del contador */
+        .contador-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        /* Estilo del título */
+        .contador-titulo {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* Contenedor de los bloques */
+        .contador-grid {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        /* Cada bloque del contador */
+        .contador-box {
+            width: 100px;
+            height: 100px;
+            background-color: #FAF0FF;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #615869;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Texto descriptivo debajo del número */
+        .contador-label {
+            font-size: 1rem;
+            font-weight: normal;
+            margin-top: 5px;
+        }
+
+        /* Responsividad */
+        @media (max-width: 600px) {
+            .contador-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Contenedor del contador -->
+    <div class="contador-container">
+        <div class="contador-titulo">Cuenta atrás para la ceremonia</div>
+        
+        <div class="contador-grid">
+            <div class="contador-box">
+                <div id="dias">00</div>
+                <div class="contador-label">Días</div>
+            </div>
+            <div class="contador-box">
+                <div id="horas">00</div>
+                <div class="contador-label">Horas</div>
+            </div>
+            <div class="contador-box">
+                <div id="minutos">00</div>
+                <div class="contador-label">Minutos</div>
+            </div>
+            <div class="contador-box">
+                <div id="segundos">00</div>
+                <div class="contador-label">Segundos</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script para el contador -->
+    <script>
+        function actualizarContador() {
+            const fechaBoda = new Date("2025-07-05T00:00:00").getTime();
+            const ahora = new Date().getTime();
+            const diferencia = fechaBoda - ahora;
+
+            const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+            document.getElementById("dias").textContent = dias.toString().padStart(2, "0");
+            document.getElementById("horas").textContent = horas.toString().padStart(2, "0");
+            document.getElementById("minutos").textContent = minutos.toString().padStart(2, "0");
+            document.getElementById("segundos").textContent = segundos.toString().padStart(2, "0");
+        }
+
+        // Actualizar el contador cada segundo
+        setInterval(actualizarContador, 1000);
+        actualizarContador(); // Llamar una vez para mostrar los valores iniciales
+    </script>
+
+</body>
 
     <!-- Sección Historia de Amor -->
     <section id="historia" class="container my-5">
