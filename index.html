@@ -198,17 +198,91 @@
     </section>
 
     <!-- Sección Mapas -->
-    <section id="mapas" class="container my-5">
-        <h2 class="text-center">Ubicación del Evento</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <h4>Lugar de la Ceremonia</h4>
-                <p>Dirección del lugar de la ceremonia.</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.845490979903!2d-3.778098923576089!3d40.809388971379036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd41622f71cd6caf%3A0xf52530a9b7f621e8!2sGruta%20de%20Nuestra%20Se%C3%B1ora%20de%20Bego%C3%B1a!5e0!3m2!1ses!2ses!4v1739294844067!5m2!1ses!2ses" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            <div class="col-md-6">
-                <h4>Lugar de la Recepción</h4>
-                <p>Dirección del lugar de la recepción.</p>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.588732320386!2d-3.7702659235758214!3d40.81503047137823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd416220ea49065f%3A0x37d76efed635fa14!2sPalacio%20Miraflores.%20Eventos%20-%20Restaurante%20-%20Hotel!5e0!3m2!1sen!2sus!4v1739295018279!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    </section>
+     <title>Ubicación del Evento</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
+        body {
+            font-family: "Playfair Display", serif;
+            background-color: #f5f5f5;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .venues {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .venues__title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #4F3566;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .venues__container {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .venue__card {
+            background: white;
+            border: 3px solid #4F3566;
+            border-radius: 10px;
+            padding: 20px;
+            width: 48%;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .venue__title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #4F3566;
+            margin-bottom: 15px;
+        }
+
+        .venue__map {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="venues">
+        <h2 class="venues__title">Ubicación del Evento</h2>
+        <div class="venues__container">
+            <!-- Lugar de la Ceremonia -->
+            <div class="venue__card">
+                <h3 class="venue__title">Lugar de la Ceremonia</h3>
+                <iframe class="venue__map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509425!2d144.9537363156168!3d-37.81627944202157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5df1f2f5d1%3A0x5e768eddbf57ea55!2sFederation%20Square!5e0!3m2!1ses!2s!4v1614371025112!5m2!1ses!2s"
+                    allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+
+            <!-- Lugar de la Recepción -->
+            <div class="venue__card">
+                <h3 class="venue__title">Lugar de la Recepción</h3>
+                <iframe class="venue__map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509425!2d144.9630576156168!3d-37.81421784202157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5df1f2f5d1%3A0x3f9e7387b5c5c09!2sEureka%20Skydeck!5e0!3m2!1ses!2s!4v1614371025112!5m2!1ses!2s"
+                    allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+</body>
     <!-- Sección Fotos -->
     <section id="fotos" class="container my-5">
         <h2 class="text-center">¡Comparte tus Fotos!</h2>
