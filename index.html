@@ -3,192 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Boda - Miguel & Ruth</title>
+    <title>Boda de Miguel & Ruth</title>
     <style>
-        /* Aquí va el código CSS */
+        /* Estilos generales */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #fafafa;
             color: #615869;
-            line-height: 1.65;
-            font-size: 16px;
+            text-align: center;
+            padding: 20px;
         }
-
-        header {
+        .header {
             position: relative;
             width: 100%;
             height: 740px;
-            background: linear-gradient(rgba(97, 88, 105, 0.35), rgba(97, 88, 105, 0.35)), url(https://example.com/imagen.jpg);
+            background: linear-gradient(rgba(97, 88, 105, 0.35), rgba(97, 88, 105, 0.35)), url('https://via.placeholder.com/1500x740');
             background-repeat: no-repeat;
             background-position: center top;
             background-size: cover;
-        }
-
-        .header-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        .header h1 {
             font-size: 3rem;
         }
-
-        .header-text h1 {
-            font-size: 4rem;
-            font-weight: bold;
-        }
-
-        .header-text p {
+        .header p {
             font-size: 1.5rem;
         }
-
-        .counter {
-            background-color: #FAF0FF;
-            position: absolute;
-            left: 50%;
-            bottom: -34%;
-            transform: translate(-50%, -50%);
-            padding: 40px 145px 44px 145px;
+        
+        /* Contenedor del contador */
+        .contador-container {
+            margin-top: 50px;
+        }
+        .contador-titulo {
             font-size: 2rem;
-            color: #615869;
+            font-weight: bold;
+            margin-bottom: 20px;
         }
-
-        /* Añadir más estilos para las secciones restantes */
-        section {
-            padding: 20px;
-        }
-
-        .image-section {
+        .contador-grid {
             display: flex;
-            align-items: center;
             justify-content: center;
-            margin-top: 20px;
+            gap: 15px;
         }
-
-        .image-section img {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 8px;
+        .contador-box {
+            width: 100px;
+            height: 100px;
+            background-color: #FAF0FF;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #615869;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
-
-        .form-container {
-            margin-top: 20px;
-            text-align: center;
+        .contador-label {
+            font-size: 1rem;
+            font-weight: normal;
+            margin-top: 5px;
         }
-
-        .form-container input, .form-container select {
-            padding: 10px;
-            margin: 10px 0;
-            width: 80%;
-            max-width: 400px;
-        }
-
-        /* Responsividad */
-        @media (max-width: 768px) {
-            .header-text h1 {
-                font-size: 2.5rem;
-            }
-
-            .header-text p {
-                font-size: 1.2rem;
-            }
-            .counter {
-                padding: 20px;
+        @media (max-width: 600px) {
+            .contador-grid {
+                flex-direction: column;
+                align-items: center;
             }
         }
     </style>
 </head>
 <body>
-
-    <!-- Cabecera con imagen y texto -->
-    <header>
-        <div class="header-text">
-            <h1>Miguel & Ruth</h1>
-            <p>Nos casamos el 05 de julio de 2025</p>
-        </div>
+    <header class="header">
+        <h1>Miguel & Ruth</h1>
+        <p>Nos casamos el 05 de julio de 2025</p>
     </header>
-
-    <!-- Contador de días -->
-    <section>
-        <div class="counter" id="contador">
-            <p>Faltan: <span id="dias-restantes">Calculando...</span> días</p>
+    
+    <div class="contador-container">
+        <div class="contador-titulo">Cuenta atrás para la ceremonia</div>
+        <div class="contador-grid">
+            <div class="contador-box">
+                <div id="dias">00</div>
+                <div class="contador-label">Días</div>
+            </div>
+            <div class="contador-box">
+                <div id="horas">00</div>
+                <div class="contador-label">Horas</div>
+            </div>
+            <div class="contador-box">
+                <div id="minutos">00</div>
+                <div class="contador-label">Minutos</div>
+            </div>
+            <div class="contador-box">
+                <div id="segundos">00</div>
+                <div class="contador-label">Segundos</div>
+            </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Como nos conocimos -->
-    <section>
-        <div class="image-section">
-            <img src="https://example.com/imagen-de-nosotros.jpg" alt="Nosotros">
-        </div>
-        <p class="text-center">Esta es la historia de cómo nos conocimos...</p>
-    </section>
-
-    <!-- Mapa de la boda y banquete -->
-    <section>
-        <div id="mapa-boda" style="height: 300px;">
-            <!-- Aquí puedes incrustar un mapa de Google Maps -->
-            <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-    </section>
-
-    <!-- Formulario de Confirmación de Asistencia -->
-    <section>
-        <div class="form-container">
-            <h3>Confirmación de Asistencia</h3>
-            <form action="tu-url-de-formulario" method="POST">
-                <input type="text" name="nombre" placeholder="Nombre" required><br>
-                <input type="text" name="apellidos" placeholder="Apellidos" required><br>
-                <input type="text" name="intolerancia" placeholder="¿Tienes alguna intolerancia?" required><br>
-                <select name="menu" required>
-                    <option value="carne">Carne</option>
-                    <option value="pescado">Pescado</option>
-                </select><br>
-                <button type="submit">Confirmar</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Galería de fotos -->
-    <section>
-        <h3>Galería de Fotos</h3>
-        <div class="image-section">
-            <p>¡Sube tus fotos para que todos podamos compartir el recuerdo!</p>
-            <a href="https://link-a-tu-album" target="_blank">Sube tus fotos aquí</a>
-        </div>
-    </section>
-
-    <!-- Script para el contador de días -->
     <script>
-        // Fecha de la boda (5 de julio de 2025)
-        const fechaBoda = new Date("2025-07-05T00:00:00").getTime();
-
-        // Función para calcular los días restantes
-        function calcularDiasRestantes() {
+        function actualizarContador() {
+            const fechaBoda = new Date("2025-07-05T00:00:00").getTime();
             const ahora = new Date().getTime();
             const diferencia = fechaBoda - ahora;
 
-            // Convertir la diferencia de tiempo en días
-            const diasRestantes = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+            const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
 
-            // Mostrar los días restantes
-            document.getElementById("dias-restantes").innerText = diasRestantes;
+            document.getElementById("dias").textContent = dias.toString().padStart(2, "0");
+            document.getElementById("horas").textContent = horas.toString().padStart(2, "0");
+            document.getElementById("minutos").textContent = minutos.toString().padStart(2, "0");
+            document.getElementById("segundos").textContent = segundos.toString().padStart(2, "0");
         }
-
-        // Actualizar el contador cada 24 horas
-        setInterval(calcularDiasRestantes, 1000 * 60 * 60 * 24);
-
-        // Calcular los días inmediatamente al cargar la página
-        calcularDiasRestantes();
+        setInterval(actualizarContador, 1000);
+        actualizarContador();
     </script>
-
 </body>
 </html>
-
-
