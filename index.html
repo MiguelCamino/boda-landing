@@ -14,38 +14,38 @@
             color: #5a2961;
         }
         .container {
-            max-width: 600 px;
-            margin: 20 px auto;
-            padding: 20 px;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
             background: white;
-            border-radius: 10 px;
-            box-shadow: 0 4 px 10 px rgba (0,0,0,0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
         .qr {
-            width: 120 px;
-            margin: 10 px 0;
+            width: 120px;
+            margin: 10px 0;
         }
         input, select, button {
-            margin-top: 10 px;
-            padding: 12 px;
-            width: 100 %;
-            border: 1 px solid #d1c4e9;
-            border-radius: 5 px;
-            font-size: 16 px;
+            margin-top: 10px;
+            padding: 12px;
+            width: 100%;
+            border: 1px solid #d1c4e9;
+            border-radius: 5px;
+            font-size: 16px;
         }
         button {
             background-color: #7b1fa2;
             color: white;
             border: none;
             cursor: pointer;
-            transition: background 0.3 s;
+            transition: background 0.3s;
         }
         button:hover {
             background-color: #4a0072;
         }
         a {
             display: inline-block;
-            margin-top: 10 px;
+            margin-top: 10px;
             color: #7b1fa2;
             text-decoration: none;
             font-weight: bold;
@@ -53,15 +53,36 @@
         a:hover {
             text-decoration: underline;
         }
+        .countdown {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
     </style>
+    <script>
+        function actualizarContador() {
+            const fechaBoda = new Date("2025-06-15T00:00:00").getTime();
+            const ahora = new Date().getTime();
+            const diferencia = fechaBoda - ahora;
+            
+            const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+            
+            document.getElementById("contador").innerHTML = `${dias}d ${horas}h ${minutos}m ${segundos}s`;
+        }
+        setInterval(actualizarContador, 1000);
+    </script>
 </head>
 <body>
     <div class="container">
         <h1>¡Nos Casamos!</h1>
-        <p><strong>Fecha:</strong> 15 de Junio de 2025</p>
-        <p><strong>Lugar Ceremonia:</strong> Iglesia San Pedro</p>
+        <p class="countdown">Faltan <span id="contador"></span> para nuestra boda</p>
+        <p><strong>Fecha:</strong> 05 de Julioo de 2025</p>
+        <p><strong>Lugar Ceremonia:</strong> Gruta nuestra señora de Begoña</p>
         <img class="qr" src="qr-ceremonia.png" alt="QR Ubicación Ceremonia">
-        <p><strong>Lugar Banquete:</strong> Hotel Paraíso</p>
+        <p><strong>Lugar Banquete:</strong> Palacio de Miraflores</p>
         <img class="qr" src="qr-banquete.png" alt="QR Ubicación Banquete">
         <p>¡Habrá parking gratuito!</p>
         
@@ -72,7 +93,6 @@
                 <option value="">Elige tu plato principal</option>
                 <option value="carne">Carne</option>
                 <option value="pescado">Pescado</option>
-                <option value="vegetariano">Vegetariano</option>
             </select>
             <input type="text" placeholder="Intolerancias Alimentarias">
             <button type="submit">Confirmar Asistencia</button>
@@ -84,3 +104,4 @@
     </div>
 </body>
 </html>
+
