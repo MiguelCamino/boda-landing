@@ -1,285 +1,204 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Boda - Miguel & Ruth</title>
-    <style>
-        /* Reset y estilos universales */
-        a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
-            margin: 0;
-            padding: 0;
-            border: 0;
-            font-size: 100%;
-            vertical-align: baseline;
-        }
+element.style {
+}
+.header {
+    position: relative;
+    width: 100%;
+    height: 740px;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(97, 88, 105, 0.35)), to(rgba(97, 88, 105, 0.35))), url(../img/banner-section/section-background.jpg);
+    background: -o-linear-gradient(rgba(97, 88, 105, 0.35), rgba(97, 88, 105, 0.35)), url(../img/banner-section/section-background.jpg);
+    background: linear-gradient(rgba(97, 88, 105, 0.35), rgba(97, 88, 105, 0.35)), url(../img/banner-section/section-background.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
+article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+*, :after, :before {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+hoja de estilo de user-agent
+header {
+    display: block;
+    unicode-bidi: isolate;
+}
+body {
+    font-size: 16px;
+    min-width: 320px;
+    position: relative;
+    line-height: 1.65;
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    overflow-x: hidden;
+    color: #615869;
+    background-color: #fff;
+}
+body {
+    font-weight: 400;
+}
+body {
+    margin: 0;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fafafa;
+}
+body {
+    line-height: 1;
+}
+:root {
+    --blue: #2196f3;
+    --indigo: #3f51b5;
+    --purple: #9c27b0;
+    --pink: #e91e63;
+    --red: #f44336;
+    --orange: #ff9800;
+    --yellow: #ffeb3b;
+    --green: #4caf50;
+    --teal: #009688;
+    --cyan: #00bcd4;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #009688;
+    --secondary: #6c757d;
+    --success: #4caf50;
+    --info: #03a9f4;
+    --warning: #ff5722;
+    --danger: #f44336;
+    --light: #f5f5f5;
+    --dark: #424242;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: "Roboto", "Helvetica", "Arial", sans-serif;
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+:root {
+    --swiper-navigation-size: 44px;
+}
+:root {
+    --swiper-theme-color: #007aff;
+}
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: transparent;
+}
+button, html, input, select, textarea {
+    color: #222;
+}
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+*, :after, :before {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+*, :after, :before {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+::selection {
+    background-color: #FAF0FF;
+    color: #fff;
+}
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+background-attachment scroll, scroll
+background-clip border-box, border-box
+background-color rgba(0, 0, 0, 0)
+background-image linear-gradient(rgba(97, 88, 105, 0.35), rgba(97, 88, 105, 0.35)), url(https://jd.exsythemes.com/img/banner-section/section-background.jpg)
+background-origin padding-box, padding-box
+background-position-x 50%, 50%
+background-position-y 0%, 0%
+background-repeat no-repeat, no-repeat
+background-size cover, cover
+border-bottom-color rgb(97, 88, 105)
+border-bottom-style none
+border-bottom-width 0px
+border-image-outset 0
+border-image-repeat stretch
+border-image-slice 100%
+border-image-source none
+border-image-width 1
+border-left-color rgb(97, 88, 105)
+border-left-style none
+border-left-width 0px
+border-right-color rgb(97, 88, 105)
+border-right-style none
+border-right-width 0px
+border-top-color rgb(97, 88, 105)
+border-top-style none
+border-top-width 0px
+box-sizing content-box
+color rgb(97, 88, 105)
+display block
+font-family "Playfair Display", serif
+font-feature-settings normal
+font-kerning auto
+font-optical-sizing auto
+font-size 16px
+font-size-adjust none
+font-stretch 100%
+font-style normal
+font-variant-alternates normal
+font-variant-caps normal
+font-variant-east-asian normal
+font-variant-emoji normal
+font-variant-ligatures normal
+font-variant-numeric normal
+font-variant-position normal
+font-variation-settings normal
+font-weight 400
+height 740px
+line-height 26.4px
+margin-bottom 0px
+margin-left 0px
+margin-right 0px
+margin-top 0px
+padding-bottom 0px
+padding-left 0px
+padding-right 0px
+padding-top 0px
+position relative
+text-align left
+text-size-adjust 100%
+unicode-bidi isolate
+vertical-align baseline
+width 1440px
+-webkit-tap-highlight-color rgba(0, 0, 0, 0)
 
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
-
-        /* Cabecera */
-        header {
-            position: relative;
-            text-align: center;
-            color: white;
-            width: 100%;
-        }
-        
-        header img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-        }
-        
-        header h1 {
-            position: absolute;
-            top: 30%;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 5vw;
-            margin: 0;
-        }
-        
-        header h2 {
-            position: absolute;
-            top: 45%;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 3vw;
-        }
-
-        header h3 {
-            position: absolute;
-            top: 55%;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 2.5vw;
-        }
-
-        /* Estilo del contador */
-        .countdown {
-            background-color: #FAF0FF;
-            position: absolute;
-            left: 50%;
-            bottom: -30%;
-            transform: translate(-50%, -50%);
-            padding: 4vw 10vw;
-            text-align: center;
-            border-radius: 10px;
-            font-size: 5vw;
-        }
-
-        /* Sección Historia */
-        .history {
-            text-align: center;
-            margin: 10vw 5vw;
-        }
-
-        .history img {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 10px;
-        }
-
-        .history h2 {
-            font-size: 4vw;
-        }
-
-        .history p {
-            font-size: 3.2vw;
-            line-height: 1.5;
-        }
-
-        /* Sección Mapa */
-        .map-container {
-            margin: 10vw 0;
-            text-align: center;
-        }
-
-        /* Formulario para confirmar asistencia */
-        .form-container {
-            margin: 10vw 5vw;
-            text-align: center;
-        }
-
-        .form-container input, .form-container select {
-            padding: 1.5vw;
-            margin: 2vw;
-            width: 80%;
-            max-width: 400px;
-            border-radius: 5px;
-            font-size: 3vw;
-        }
-
-        .form-container input[type="submit"] {
-            background-color: #FAF0FF;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .form-container input[type="submit"]:hover {
-            background-color: #d8b9ff;
-        }
-
-        /* Galería de fotos */
-        .gallery-container {
-            margin: 10vw 0;
-            text-align: center;
-        }
-
-        /* Layout de galería */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 10px;
-            padding: 0 5vw;
-        }
-
-        .gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        /* Media Queries para dispositivos pequeños */
-        @media (max-width: 768px) {
-            header h1, header h2, header h3 {
-                font-size: 10vw;
-            }
-
-            .countdown {
-                padding: 6vw 12vw;
-                font-size: 8vw;
-            }
-
-            .history img {
-                max-width: 90%;
-            }
-
-            .form-container input, .form-container select {
-                font-size: 4vw;
-                width: 90%;
-            }
-
-            .gallery-container h2 {
-                font-size: 5vw;
-            }
-        }
-
-        /* Media Queries para dispositivos móviles */
-        @media (max-width: 480px) {
-            header h1, header h2, header h3 {
-                font-size: 12vw;
-            }
-
-            .countdown {
-                padding: 8vw 15vw;
-                font-size: 10vw;
-            }
-
-            .history img {
-                max-width: 90%;
-            }
-
-            .form-container input, .form-container select {
-                font-size: 5vw;
-                width: 100%;
-            }
-
-            .gallery-container h2 {
-                font-size: 6vw;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Cabecera con imagen -->
-    <header>
-        <img src="foto-de-boda.jpg" alt="Foto de Boda">
-        <h1>Miguel & Ruth</h1>
-        <h2>Nos casamos</h2>
-        <h3>05 de julio de 2025</h3>
-    </header>
-
-    <!-- Contador de cuenta regresiva -->
-    <div class="countdown" id="countdown">
-        <p>Faltan</p>
-        <div id="countdown-timer"></div>
-    </div>
-
-    <!-- Historia de cómo nos conocimos -->
-    <section class="history">
-        <h2>¿Cómo nos conocimos?</h2>
-        <img src="como-nos-conocimos.jpg" alt="Foto Historia">
-        <p>Una pequeña descripción de cómo nos conocimos...</p>
-    </section>
-
-    <!-- Mapa de la ceremonia -->
-    <section class="map-container">
-        <h2>Mapa de la ceremonia</h2>
-        <div id="map"></div>
-    </section>
-
-    <!-- Formulario para confirmar asistencia -->
-    <section class="form-container">
-        <h2>Confirma tu asistencia</h2>
-        <form action="#">
-            <input type="text" placeholder="Nombre y Apellidos" required><br>
-            <input type="text" placeholder="¿Tienes alguna intolerancia?" required><br>
-            <select required>
-                <option value="carne">Carne</option>
-                <option value="pescado">Pescado</option>
-            </select><br>
-            <input type="submit" value="Confirmar">
-        </form>
-    </section>
-
-    <!-- Galería de fotos -->
-    <section class="gallery-container">
-        <h2>Galería de fotos</h2>
-        <div class="gallery">
-            <img src="foto1.jpg" alt="Foto 1">
-            <img src="foto2.jpg" alt="Foto 2">
-            <!-- Más fotos -->
-        </div>
-    </section>
-
-    <script>
-        // Código del contador de cuenta regresiva
-        function updateCountdown() {
-            const eventDate = new Date("July 5, 2025 00:00:00").getTime();
-            const now = new Date().getTime();
-            const timeLeft = eventDate - now;
-            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-            document.getElementById("countdown-timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-        }
-
-        setInterval(updateCountdown, 1000);
-    </script>
-
-    <script>
-        // Funciones de Google Maps
-        function initMap() {
-            const mapOptions = {
-                center: {lat: 40.4168, lng: -3.7038},
-                zoom: 15,
-                mapTypeId: 'roadmap'
-            };
-            const map = new google.maps.Map(document.getElementById('map'), mapOptions);
-        }
-    </script>
-    
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap"></script>
-
-</body>
-</html>
 
