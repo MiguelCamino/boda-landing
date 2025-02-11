@@ -1,112 +1,281 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Invitación para la boda de [Miguel] y [ruth]">
-    <meta name="robots" content="noindex, nofollow">
-    <title>Boda de [Miguel] y [Ruth] - ¡Próximamente!</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <title>Mi Boda - Miguel & Ruth</title>
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f0f0f0;
-      }
-      header {
-        background-color: #ff7f50;
-        color: white;
-        text-align: center;
-        padding: 50px 0;
-      }
-      header h1 {
-        margin: 0;
-        font-size: 3em;
-      }
-      section {
-        padding: 30px;
-        text-align: center;
-      }
-      footer {
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 20px;
-      }
-      .e-btn--3d {
-        background-color: #ff7f50;
-        color: white;
-        padding: 10px 20px;
-        text-decoration: none;
-        border-radius: 5px;
-        font-size: 1.2em;
-        margin-top: 20px;
-        display: inline-block;
-      }
-      .e-btn--3d:hover {
-        background-color: #ff6347;
-      }
-      input, select {
-        padding: 10px;
-        margin: 10px 0;
-        width: 250px;
-        font-size: 1em;
-      }
-      button {
-        background-color: #ff7f50;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        font-size: 1.2em;
-        cursor: pointer;
-      }
-      button:hover {
-        background-color: #ff6347;
-      }
-    </style>
-  </head>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
 
-  <body>
+        /* Cabecera */
+        header {
+            position: relative;
+            text-align: center;
+            color: white;
+            width: 100%;
+        }
+        
+        header img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        
+        header h1 {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 5vw;
+            margin: 0;
+        }
+        
+        header h2 {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 3vw;
+        }
+
+        header h3 {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2.5vw;
+        }
+
+        /* Estilo del contador */
+        .countdown {
+            background-color: #FAF0FF;
+            position: absolute;
+            left: 50%;
+            bottom: -30%;
+            transform: translate(-50%, -50%);
+            padding: 4vw 10vw;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 5vw;
+        }
+
+        /* Sección Historia */
+        .history {
+            text-align: center;
+            margin: 10vw 5vw;
+        }
+
+        .history img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+        }
+
+        .history h2 {
+            font-size: 4vw;
+        }
+
+        .history p {
+            font-size: 3.2vw;
+            line-height: 1.5;
+        }
+
+        /* Sección Mapa */
+        .map-container {
+            margin: 10vw 0;
+            text-align: center;
+        }
+
+        /* Formulario para confirmar asistencia */
+        .form-container {
+            margin: 10vw 5vw;
+            text-align: center;
+        }
+
+        .form-container input, .form-container select {
+            padding: 1.5vw;
+            margin: 2vw;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 5px;
+            font-size: 3vw;
+        }
+
+        .form-container input[type="submit"] {
+            background-color: #FAF0FF;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #d8b9ff;
+        }
+
+        /* Galería de fotos */
+        .gallery-container {
+            margin: 10vw 0;
+            text-align: center;
+        }
+
+        .gallery-container h2 {
+            font-size: 4vw;
+        }
+
+        /* Layout de galería */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
+            padding: 0 5vw;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Media Queries para dispositivos pequeños */
+        @media (max-width: 768px) {
+            header h1, header h2, header h3 {
+                font-size: 10vw;
+            }
+
+            .countdown {
+                padding: 6vw 12vw;
+                font-size: 8vw;
+            }
+
+            .history img {
+                max-width: 90%;
+            }
+
+            .form-container input, .form-container select {
+                font-size: 4vw;
+                width: 90%;
+            }
+
+            .gallery-container h2 {
+                font-size: 5vw;
+            }
+        }
+
+        /* Media Queries para dispositivos móviles */
+        @media (max-width: 480px) {
+            header h1, header h2, header h3 {
+                font-size: 12vw;
+            }
+
+            .countdown {
+                padding: 8vw 15vw;
+                font-size: 10vw;
+            }
+
+            .history img {
+                max-width: 90%;
+            }
+
+            .form-container input, .form-container select {
+                font-size: 5vw;
+                width: 100%;
+            }
+
+            .gallery-container h2 {
+                font-size: 6vw;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabecera con imagen -->
     <header>
-      <h1>¡Nos Casamos!</h1>
-      <p>La boda de [Miguel] y [Ruth] está por llegar</p>
+        <img src="foto-de-boda.jpg" alt="Foto de Boda">
+        <h1>Miguel & Ruth</h1>
+        <h2>Nos casamos</h2>
+        <h3>05 de julio de 2025</h3>
     </header>
 
-    <section id="details">
-      <h2>Detalles del Evento</h2>
-      <p>Nos casamos el <strong>[05 de Julio de 2025]</strong></p>
-      <p>En <strong>[Gruta nuestra señora de Begoña]</strong></p>
-      <p>¡Esperamos contar con tu presencia!</p>
-      <a href="#rsvp" class="e-btn--3d">Confirmar Asistencia</a>
+    <!-- Contador de cuenta regresiva -->
+    <div class="countdown" id="countdown">
+        <p>Faltan</p>
+        <div id="countdown-timer"></div>
+    </div>
+
+    <!-- Historia de cómo nos conocimos -->
+    <section class="history">
+        <h2>¿Cómo nos conocimos?</h2>
+        <img src="como-nos-conocimos.jpg" alt="Foto Historia">
+        <p>Una pequeña descripción de cómo nos conocimos...</p>
     </section>
 
-    <section id="rsvp" style="background-color: #f4f4f4;">
-      <h2>Confirmar Asistencia</h2>
-      <form action="#">
-        <label for="name">Nombre Completo:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
-
-        <label for="email">Correo Electrónico:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
-
-        <label for="attendance">¿Asistirás?</label><br>
-        <select id="attendance" name="attendance">
-          <option value="yes">Sí, asistiré</option>
-          <option value="no">No, no podré asistir</option>
-        </select><br><br>
-
-        <button type="submit">Enviar</button>
-      </form>
+    <!-- Mapa de la ceremonia -->
+    <section class="map-container">
+        <h2>Mapa de la ceremonia</h2>
+        <div id="map"></div>
     </section>
 
-    <footer>
-      <p>¡Gracias por ser parte de este momento especial!</p>
-      <p>&copy; 2025 - Boda de [Nombre] y [Nombre]</p>
-    </footer>
-  </body>
-</html>
-</html>
+    <!-- Formulario para confirmar asistencia -->
+    <section class="form-container">
+        <h2>Confirma tu asistencia</h2>
+        <form action="#">
+            <input type="text" placeholder="Nombre y Apellidos" required><br>
+            <input type="text" placeholder="¿Tienes alguna intolerancia?" required><br>
+            <select required>
+                <option value="carne">Carne</option>
+                <option value="pescado">Pescado</option>
+            </select><br>
+            <input type="submit" value="Confirmar">
+        </form>
+    </section>
 
+    <!-- Galería de fotos -->
+    <section class="gallery-container">
+        <h2>Galería de fotos</h2>
+        <div class="gallery">
+            <img src="foto1.jpg" alt="Foto 1">
+            <img src="foto2.jpg" alt="Foto 2">
+            <!-- Más fotos -->
+        </div>
+    </section>
+
+    <script>
+        // Código del contador de cuenta regresiva
+        function updateCountdown() {
+            const eventDate = new Date("July 5, 2025 00:00:00").getTime();
+            const now = new Date().getTime();
+            const timeLeft = eventDate - now;
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+            document.getElementById("countdown-timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+
+        setInterval(updateCountdown, 1000);
+    </script>
+
+    <script>
+        // Funciones de Google Maps
+        function initMap() {
+            const mapOptions = {
+                center: {lat: 40.4168, lng: -3.7038},
+                zoom: 15,
+                mapTypeId: 'roadmap'
+            };
+            const map = new google.maps.Map(document.getElementById('map'), mapOptions);
+        }
+    </script>
+    
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap"></script>
+
+</body>
+</html>
 
