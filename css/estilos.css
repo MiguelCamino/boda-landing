@@ -119,13 +119,20 @@
 
 /* Título ligeramente a la izquierda */
 .love-story__title {
-    font-family: "Playfair Display", serif;
+    font-family: "Marcellus", serif;
+    font-size: 56px;
+    line-height: 88px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #4F3566;
+    margin-bottom: 32px;
     font-size: 42px;
     color: #4F3566;
     position: absolute;
-    top: -60px;
-    left: 10%;
-    z-index: 3;
+    top: 32px;
+    left: 50%;
+    z-index: 7;
+    transform: translateX (-50%);
 }
 
 /* Imagen centrada */
