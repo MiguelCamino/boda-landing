@@ -98,12 +98,13 @@
 
 /* Bloque de color a la izquierda */
 .love-story__left-block {
+       content: "";
     position: absolute;
+    top: 0;
     left: 0;
-    width: 35%;
+    width: 44.44%;
     height: 100%;
-    background-color: #E6D4F1; /* Color pastel similar */
-    z-index: 1;
+    background-color: #FAF0FF;
 }
 
 /* Contenido de la historia */
