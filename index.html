@@ -182,21 +182,13 @@
             document.getElementById("minutos").textContent = minutos.toString().padStart(2, "0");
             document.getElementById("segundos").textContent = segundos.toString().padStart(2, "0");
         }
-
         // Actualizar el contador cada segundo
         setInterval(actualizarContador, 1000);
         actualizarContador(); // Llamar una vez para mostrar los valores iniciales
     </script>
-
 </body>
-
     <!-- Sección Historia de Amor -->
- <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuestra Historia de Amor</title>
+   <title>Nuestra Historia de Amor</title>
     <link rel="stylesheet" href="style.css">
     <style>
         * {
@@ -204,10 +196,14 @@
             margin: 0;
             padding: 0;
         }
-
         body {
             font-family: "Playfair Display", serif;
             background-color: #FAF0FF;
+        }
+
+        /* Espacio extra entre secciones */
+        .spacer {
+            height: 100px;
         }
 
         .love-story {
@@ -215,16 +211,16 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            padding: 100px 10%;
+            padding: 120px 10%;
             background-color: #FAF0FF;
         }
 
         .love-story__left-block {
             position: absolute;
             left: 0;
-            width: 35%;
+            width: 50%; /* Se extiende más a la derecha */
             height: 100%;
-            background-color: #E6D4F1;
+            background-color: #4F3566; /* Mismo color del lado derecho */
             z-index: 1;
         }
 
@@ -238,13 +234,13 @@
             z-index: 2;
         }
 
+        /* Título con el mismo estilo que el del contador */
         .love-story__title {
             font-size: 42px;
             color: #4F3566;
-            position: absolute;
-            top: -50px;
-            left: 10%;
-            z-index: 3;
+            text-align: center;
+            width: 100%;
+            margin-bottom: 50px;
         }
 
         .love-story__image-container {
@@ -262,13 +258,10 @@
             height: auto;
         }
 
+        /* Texto sin fondo blanco */
         .love-story__text {
             width: 400px;
-            padding: 30px;
-            background: #fff;
-            box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            margin-left: 50px;
+            padding-left: 50px; /* Espaciado desde la imagen */
         }
 
         .love-story__text-title {
@@ -281,6 +274,7 @@
             font-size: 16px;
             line-height: 24px;
             color: #615869;
+            text-align: justify; /* Justificar a la izquierda */
         }
 
         @media (max-width: 1024px) {
@@ -298,11 +292,16 @@
             }
             .love-story__text {
                 margin-left: 0;
+                padding-left: 0;
+                text-align: center;
             }
         }
     </style>
 </head>
 <body>
+
+    <!-- Espacio extra entre contador y esta sección -->
+    <div class="spacer"></div>
 
     <section class="love-story">
         <div class="love-story__left-block"></div> 
@@ -322,10 +321,6 @@
     </section>
 
 </body>
-</html>
-
-
-
     <!-- Sección Mapas -->
      <title>Ubicación del Evento</title>
     <style>
