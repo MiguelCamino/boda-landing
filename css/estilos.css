@@ -96,7 +96,15 @@
     background-color: #FAF0FF; /* Color similar al del contador */
 }
 
-
+.love-story__left-block {
+       content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 44.44%;
+    height: 100%;
+    background-color: #FAF0FF;
+}
 
 /* Contenido de la historia */
 .love-story__content {
