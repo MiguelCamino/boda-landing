@@ -1,451 +1,395 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boda de Miguel & Ruth</title>
-    <!-- Vincula el archivo CSS de Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Estilos personalizados -->
-    <style>
-        /* Estilo del Header */
-        .header {
-            background-image: url('img/Header.jpg');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 150px 0;
-            padding: 400px 0;
-        }
-        .header h1 {
-    </style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boda de Miguel & Ruth</title>
+  <!-- Vincula el archivo CSS de Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Estilos personalizados -->
+  <style>
+    /* Estilo del Header */
+    .header {
+      background-image: url('img/Header.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 150px 0;
+      padding: 400px 0;
+    }
+
+    .header h1 {
+  </style>
 </head>
+
 <body>
   <!-- Barra de navegación sobre la imagen -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: absolute; top: 0; left: 0; width: 100%; z-index: 10;">
- <!-- Barra de navegación superpuesta sobre la imagen -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: fixed; top: 0; left: 0; width: 100%; z-index: 10;">
-    <div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: absolute; top: 0; left: 0; width: 100%; z-index: 10;">
+    <!-- Barra de navegación superpuesta sobre la imagen -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: fixed; top: 0; left: 0; width: 100%; z-index: 10;">
+      <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-    <!-- Barra de navegación -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          <!-- Barra de navegación -->
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#historia">Historia de Amor</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#mapas">Mapas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#fotos">Fotos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#confirmacion">Confirmación</a>
-                    </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#historia">Historia de Amor</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#mapas">Mapas</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#fotos">Fotos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#confirmacion">Confirmación</a>
+                  </li>
                 </ul>
+              </div>
             </div>
-        </div>
-    </div>
-</nav>
+      </div>
     </nav>
-    <!-- Sección Header -->
-    <header class="header" id="home">
-        <h1>Miguel & Ruth </h1>
-            <p>Nos casamos</p>
-        <p> 05 de julio de 2025</p>
-    </header>
+  </nav>
+  <!-- Sección Header -->
+  <header class="header" id="home">
+    <h1>Miguel & Ruth </h1>
+    <p>Nos casamos</p>
+    <p> 05 de julio de 2025</p>
+  </header>
 
-    <!-- Sección Contador -->
-    <title>Cuenta atrás para la boda</title>
-    <style>
-        /* Estilos generales */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <!-- Sección Contador -->
+  <title>Cuenta atrás para la boda</title>
+  <style>
+    /* Estilos generales */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #fafafa;
-            color: #615869;
-            text-align: center;
-            padding: 20px;
-        }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #fafafa;
+      color: #615869;
+      text-align: center;
+      padding: 20px;
+    }
 
-        /* Contenedor principal del contador */
-        .contador-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin-top: 50px;
-        }
+    /* Contenedor principal del contador */
+    .contador-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 50px;
+    }
 
-        /* Estilo del título */
-        .contador-titulo {
-            font-size: 2rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
+    /* Estilo del título */
+    .contador-titulo {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
 
-        /* Contenedor de los bloques */
-        .contador-grid {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
+    /* Contenedor de los bloques */
+    .contador-grid {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
 
-        /* Cada bloque del contador */
-        .contador-box {
-            width: 100px;
-            height: 100px;
-            background-color: #FAF0FF;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border-radius: 10px;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #615869;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
+    /* Cada bloque del contador */
+    .contador-box {
+      width: 100px;
+      height: 100px;
+      background-color: #FAF0FF;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #615869;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
 
-        /* Texto descriptivo debajo del número */
-        .contador-label {
-            font-size: 1rem;
-            font-weight: normal;
-            margin-top: 5px;
-        }
+    /* Texto descriptivo debajo del número */
+    .contador-label {
+      font-size: 1rem;
+      font-weight: normal;
+      margin-top: 5px;
+    }
 
-        /* Responsividad */
-        @media (max-width: 600px) {
-            .contador-grid {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
-</head>
-<body>
+    /* Responsividad */
+    @media (max-width: 600px) {
+      .contador-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+  </head>
+
+  <body>
 
     <!-- Contenedor del contador -->
     <div class="contador-container">
-        <div class="contador-titulo">Cuenta atrás para la ceremonia</div>
+      <div class="contador-titulo">Cuenta atrás para la ceremonia</div>
 
-        <div class="contador-grid">
-            <div class="contador-box">
-                <div id="dias">00</div>
-                <div class="contador-label">Días</div>
-            </div>
-            <div class="contador-box">
-                <div id="horas">00</div>
-                <div class="contador-label">Horas</div>
-            </div>
-            <div class="contador-box">
-                <div id="minutos">00</div>
-                <div class="contador-label">Minutos</div>
-            </div>
-            <div class="contador-box">
-                <div id="segundos">00</div>
-                <div class="contador-label">Segundos</div>
-            </div>
+      <div class="contador-grid">
+        <div class="contador-box">
+          <div id="dias">00</div>
+          <div class="contador-label">Días</div>
         </div>
+        <div class="contador-box">
+          <div id="horas">00</div>
+          <div class="contador-label">Horas</div>
+        </div>
+        <div class="contador-box">
+          <div id="minutos">00</div>
+          <div class="contador-label">Minutos</div>
+        </div>
+        <div class="contador-box">
+          <div id="segundos">00</div>
+          <div class="contador-label">Segundos</div>
+        </div>
+      </div>
     </div>
 
     <!-- Script para el contador -->
     <script>
-        function actualizarContador() {
-            const fechaBoda = new Date("2025-07-05T00:00:00").getTime();
-            const ahora = new Date().getTime();
-            const diferencia = fechaBoda - ahora;
-
-            const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-            const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
-            const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
-
-            document.getElementById("dias").textContent = dias.toString().padStart(2, "0");
-            document.getElementById("horas").textContent = horas.toString().padStart(2, "0");
-            document.getElementById("minutos").textContent = minutos.toString().padStart(2, "0");
-            document.getElementById("segundos").textContent = segundos.toString().padStart(2, "0");
-        }
-
-        // Actualizar el contador cada segundo
-        setInterval(actualizarContador, 1000);
-        actualizarContador(); // Llamar una vez para mostrar los valores iniciales
+      function actualizarContador() {
+        const fechaBoda = new Date("2025-07-05T00:00:00").getTime();
+        const ahora = new Date().getTime();
+        const diferencia = fechaBoda - ahora;
+        const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+        const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+        const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+        document.getElementById("dias").textContent = dias.toString().padStart(2, "0");
+        document.getElementById("horas").textContent = horas.toString().padStart(2, "0");
+        document.getElementById("minutos").textContent = minutos.toString().padStart(2, "0");
+        document.getElementById("segundos").textContent = segundos.toString().padStart(2, "0");
+      }
+      // Actualizar el contador cada segundo
+      setInterval(actualizarContador, 1000);
+      actualizarContador(); // Llamar una vez para mostrar los valores iniciales
     </script>
 
-</body>
-            <!-- Sección Pareja -->
-<div class="couple_groom">
-      <div class="couple_image couple__image-groom--left border--colored"></div>
-      <div class="couple_text couple_text--right">
-        <div class="couple_text-head text--colored">
-          <h3 class="couple_title text--colored">Miguel</h3>
-          <span class="couple_subtitle text--colored">El Novio</span>
-        </div>
-        <div class="couple_text-body">
-          <p class="couple_descr">"Conocí a Ruth hace 7 años en un club, justo cuando regresaba de un viaje. Fue algo increíble y parecía una coincidencia del destino."</p>
-          <p class="couple_descr">"Desde entonces, supe que era la persona con la que quería compartir mi vida."</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="couple_bride">
-      <div class="couple_image couple__image-bride--right border--colored"></div>
-      <div class="couple_text couple_text--left">
-        <div class="couple_text-head text--colored">
-          <h3 class="couple_title text--colored">Ruth</h3>
-          <span class="couple_subtitle text--colored">La Novia</span>
-        </div>
-        <div class="couple_text-body">
-          <p class="couple_descr">"Miguel y yo somos completamente opuestos, pero eso nunca ha sido un problema."</p>
-          <p class="couple_descr">"Lo más importante es que compartimos los mismos valores y metas en la vida. Hemos crecido juntos y nos hemos convertido en mejores personas."</p>
-        </div>
-      </div>
-    </div>         
-  </div>
+  </body>
+  <!-- Sección Pareja -->
+   </section>
     
-    <!-- Sección Historia de Amor -->
-    <section id="historia" class="container my-5">
-        <h2 class="text-center">Nuestra Historia de Amor</h2>
-        <p>Aquí puedes contar la historia de cómo se conocieron, sus momentos especiales y lo que significa este día para ustedes.</p>
+    <section id="pareja" data-aos="fade-up">
+        <h2>Pareja</h2>
+        <div class="persona">
+            <img src="novio.jpg" alt="Miguel">
+            <div class="texto">
+                <h3>Miguel</h3>
+                <p>El novio</p>
+                <p>Descripción sobre Miguel...</p>
+            </div>
+        </div>
+        <div class="persona" data-aos="fade-up">
+            <img src="novia.jpg" alt="Ruth">
+            <div class="texto">
+                <h3>Ruth</h3>
+                <p>La novia</p>
+                <p>Descripción sobre Ruth...</p>
+            </div>
+        </div>
     </section>
-       <!-- Sección como  lo hicimos -->
- <div class="story_slider-text">
-    <div class="slider_head-text">
-      <h3 class="couple__title">Como le pedi matrimonio</h3>
-    </div>
-    <p class="story_slider-descr">
-      "Miguel proposed to Ruth in November 2014 just as he completed the NYC Marathon. A month later, Miguel counter-proposed to Ruth on Brooklyn Bridge. They're now busy planning their Valentine's Day 2016 wedding and chasing after their dog, Cody."
-    </p>
-  </div>
-</section>
-<div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 1045px;">
-    <div>
-        <div class="story_slide" style="width: 100%; display: inline-block;"> 
-            <div class="story_slider-image">
-                <img class="story_slider-image img-responsive" src="https://via.placeholder.com/600x400" alt="Random image">
-            </div>
-        </div>
-        <div class="story_slider-text">
-            <div class="slider_head-text text--colored">
-                <h3 class="couple__title text--colored">Como nos conocimos</h3>
-            </div>
-            <p class="story_slider-descr">
-                "How we met is an unlikely funny story! Three years ago, he tweeted that he was moving and had a bunch of horror DVD's he needed to get rid of. At the time, we didn't follow each other, so a mutual friend responded to his tweet and included me in on it."
-            </p>
-        </div>
-    </div>
-</div>
 
-<div class="slick-slide" data-slick-index="1" aria-hidden="true" style="width: 1045px;" tabindex="-1">
-    <div>
-        <div class="story_slide" style="width: 100%; display: inline-block;">
-            <div class="story_slider-image">
-                <img class="img-responsive" src="https://via.placeholder.com/600x400" alt="Random image">
-            </div>
-            <div class="story_slider-text">
-                <div class="slider_head-text">
-                    <h3 class="couple_title">Primera cita</h3>
+  <!-- Sección Historia de Amor -->
+  <section id="historia" data-aos="fade-up">
+        <h2>Historia de Amor</h2>
+        <div class="slider">
+            <div class="slide"> <img src="conocimos.jpg" alt="Como nos conocimos"><p>Descripción...</p></div>
+            <div class="slide"> <img src="primera-cita.jpg" alt="Nuestra primera cita"><p>Descripción...</p></div>
+            <div class="slide"> <img src="propuesta.jpg" alt="Como le pedí matrimonio"><p>Descripción...</p></div>
+        </div>
+    </section>
+    
+      <!-- Sección fotos nuestras -->
+      <section id="fotos" data-aos="fade-up">
+        <h2>Nuestras Fotos</h2>
+        <div class="carousel">
+            <img src="foto1.jpg" alt="foto boda">
+            <img src="foto2.jpg" alt="foto boda">
+            <img src="foto3.jpg" alt="foto boda">
+        </div>
+    </section>
+            <!-- Sección Mapas -->
+            <title>Ubicación del Evento</title>
+            <style>
+              * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+              }
+
+              body {
+                font-family: "Playfair Display", serif;
+                background-color: #f5f5f5;
+                padding: 40px;
+                text-align: center;
+              }
+
+              .venues {
+                max-width: 1200px;
+                margin: 0 auto;
+              }
+
+              .venues__title {
+                font-size: 28px;
+                font-weight: bold;
+                color: #4F3566;
+                margin-bottom: 30px;
+                text-transform: uppercase;
+              }
+
+              .venues__container {
+                display: flex;
+                justify-content: space-between;
+                gap: 30px;
+              }
+
+              .venue__card {
+                background: white;
+                border: 3px solid #4F3566;
+                border-radius: 10px;
+                padding: 20px;
+                width: 48%;
+                text-align: center;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+              }
+
+              .venue__title {
+                font-size: 22px;
+                font-weight: bold;
+                color: #4F3566;
+                margin-bottom: 15px;
+              }
+
+              .venue__map {
+                width: 100%;
+                height: 300px;
+                border: none;
+                border-radius: 8px;
+              }
+            </style>
+            </head>
+
+            <body>
+
+              <div class="venues">
+                <h2 class="venues__title">Ubicación del Evento</h2>
+                <div class="venues__container">
+                  <!-- Lugar de la Ceremonia -->
+                  <div class="venue__card">
+                    <h3 class="venue__title">Lugar de la Ceremonia</h3>
+                    <iframe class="venue__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509425!2d144.9537363156168!3d-37.81627944202157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5df1f2f5d1%3A0x5e768eddbf57ea55!2sFederation%20Square!5e0!3m2!1ses!2s!4v1614371025112!5m2!1ses!2s" allowfullscreen="" loading="lazy">
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.845490979903!2d-3.778098923576089!3d40.809388971379036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd41622f71cd6caf%3A0xf52530a9b7f621e8!2sGruta%20de%20Nuestra%20Se%C3%B1ora%20de%20Bego%C3%B1a!5e0!3m2!1ses!2ses!4v1739294844067!5m2!1ses!2ses" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"loading="lazy">
+                    </iframe>
+                  </div>
+
+                  <!-- Lugar de la Recepción -->
+                  <div class="venue__card">
+                    <h3 class="venue__title">Lugar de la Recepción</h3>
+                    <iframe class="venue__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509425!2d144.9630576156168!3d-37.81421784202157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5df1f2f5d1%3A0x3f9e7387b5c5c09!2sEureka%20Skydeck!5e0!3m2!1ses!2s!4v1614371025112!5m2!1ses!2s" allowfullscreen="" loading="lazy">
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.588732320386!2d-3.7702659235758214!3d40.81503047137823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd416220ea49065f%3A0x37d76efed635fa14!2sPalacio%20Miraflores.%20Eventos%20-%20Restaurante%20-%20Hotel!5e0!3m2!1sen!2sus!4v1739295018279!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" loading="lazy">
+                    </iframe>
+                  </div>
                 </div>
-                <p class="story_slider-descr">
-                    "Ruth showed up to their first date straight from the gym (with her hair still wet from the shower, as Miguel never lets her forget). To her horror, the cozy bar she picked out for their first meeting was hosting an office happy hour, so it was absolutely packed and conversation was near impossible. Both still remember the first time they caught each other's eyes at the bar. After just a few moments, they quickly switched gears and headed to a nearby restaurant."
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="slick-slide" data-slick-index="2" aria-hidden="true" style="width: 1045px;" tabindex="-1">
-    <div>
- <!-- Sección fotos nuestras -->
-<section class="photos" id="photos">
-    <h2 class="s-title text--colored">Our Photos</h2>
-    <div class="swiper-container">
-        <div class="photosslider swiper-wrapper">
-            <!-- Repeatable block of photo items -->
-            <div class="photo swiper-slide">
-                <a class="fancy" href="https://via.placeholder.com/600x400" data-fancybox="gallery">
-                    <img class="img-responsive" src="https://via.placeholder.com/600x400" alt="Random photo">
-                </a>
-            </div>
-    <!-- Sección Mapas -->
-     <title>Ubicación del Evento</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+              </div>
 
-        body {
-            font-family: "Playfair Display", serif;
-            background-color: #f5f5f5;
-            padding: 40px;
-            text-align: center;
-        }
+            </body>
+            <!-- Sección Fotos -->
+            <section id="fotos" class="container my-5">
+              <h2 class="text-center">¡Comparte tus Fotos!</h2>
+              <p>Aquí puedes subir las fotos que tomes durante nuestra boda. ¡Nos encantaría verlas!</p>
 
-        .venues {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+              <!-- Formulario para cargar fotos -->
+              <form action="upload.php" method="post" enctype="multipart/form-data">
+                <div class="mb-3">
+                  <label for="foto" class="form-label">Selecciona una foto</label>
+                  <input type="file" class="form-control" id="foto" name="foto" accept="image/*" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Subir Foto</button>
+              </form>
+            </section>
 
-        .venues__title {
-            font-size: 28px;
-            font-weight: bold;
-            color: #4F3566;
-            margin-bottom: 30px;
-            text-transform: uppercase;
-        }
-
-        .venues__container {
-            display: flex;
-            justify-content: space-between;
-            gap: 30px;
-        }
-
-        .venue__card {
-            background: white;
-            border: 3px solid #4F3566;
-            border-radius: 10px;
-            padding: 20px;
-            width: 48%;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .venue__title {
-            font-size: 22px;
-            font-weight: bold;
-            color: #4F3566;
-            margin-bottom: 15px;
-        }
-
-        .venue__map {
-            width: 100%;
-            height: 300px;
-            border: none;
-            border-radius: 8px;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="venues">
-        <h2 class="venues__title">Ubicación del Evento</h2>
-        <div class="venues__container">
-            <!-- Lugar de la Ceremonia -->
-            <div class="venue__card">
-                <h3 class="venue__title">Lugar de la Ceremonia</h3>
-                <iframe class="venue__map"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509425!2d144.9537363156168!3d-37.81627944202157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5df1f2f5d1%3A0x5e768eddbf57ea55!2sFederation%20Square!5e0!3m2!1ses!2s!4v1614371025112!5m2!1ses!2s"
-                    allowfullscreen="" loading="lazy">
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.845490979903!2d-3.778098923576089!3d40.809388971379036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd41622f71cd6caf%3A0xf52530a9b7f621e8!2sGruta%20de%20Nuestra%20Se%C3%B1ora%20de%20Bego%C3%B1a!5e0!3m2!1ses!2ses!4v1739294844067!5m2!1ses!2ses" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"loading="lazy">
-                </iframe>
-            </div>
-
-            <!-- Lugar de la Recepción -->
-            <div class="venue__card">
-                <h3 class="venue__title">Lugar de la Recepción</h3>
-                <iframe class="venue__map"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509425!2d144.9630576156168!3d-37.81421784202157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5df1f2f5d1%3A0x3f9e7387b5c5c09!2sEureka%20Skydeck!5e0!3m2!1ses!2s!4v1614371025112!5m2!1ses!2s"
-                    allowfullscreen="" loading="lazy">
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.588732320386!2d-3.7702659235758214!3d40.81503047137823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd416220ea49065f%3A0x37d76efed635fa14!2sPalacio%20Miraflores.%20Eventos%20-%20Restaurante%20-%20Hotel!5e0!3m2!1sen!2sus!4v1739295018279!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" loading="lazy">
-                </iframe>
-            </div>
-        </div>
-    </div>
-
-</body>
-    <!-- Sección Fotos -->
-    <section id="fotos" class="container my-5">
-        <h2 class="text-center">¡Comparte tus Fotos!</h2>
-        <p>Aquí puedes subir las fotos que tomes durante nuestra boda. ¡Nos encantaría verlas!</p>
-
-        <!-- Formulario para cargar fotos -->
-        <form action="upload.php" method="post" enctype="multipart/form-data">
-            <div class="mb-3">
-                <label for="foto" class="form-label">Selecciona una foto</label>
-                <input type="file" class="form-control" id="foto" name="foto" accept="image/*" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Subir Foto</button>
-        </form>
-    </section>
-
-    <!-- Sección Confirmación -->
-    <section id="confirmacion" class="container my-5">
-        <h2 class="text-center">Confirmación de Asistencia</h2>
-        <p>Por favor confirma tu asistencia al evento antes del 30 de Mayo de 2025.</p>
-        <form>
-            <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre Completo</label>
-                <input type="text" class="form-control" id="nombre" placeholder="Tu nombre" required>
-            </div>
-            <div class="mb-3">
-                <label for="asistencia" class="form-label">¿Asistirás?</label>
-                <select class="form-select" id="asistencia" required>
+            <!-- Sección Confirmación -->
+            <section id="confirmacion" class="container my-5">
+              <h2 class="text-center">Confirmación de Asistencia</h2>
+              <p>Por favor confirma tu asistencia al evento antes del 30 de Mayo de 2025.</p>
+              <form>
+                <div class="mb-3">
+                  <label for="nombre" class="form-label">Nombre Completo</label>
+                  <input type="text" class="form-control" id="nombre" placeholder="Tu nombre" required>
+                </div>
+                <div class="mb-3">
+                  <label for="asistencia" class="form-label">¿Asistirás?</label>
+                  <select class="form-select" id="asistencia" required>
                     <option value="si">Sí</option>
                     <option value="no">No</option>
                     <option value="talvez">Tal vez</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="alergias" class="form-label">Intolerancias o Alergias</label>
-                <textarea class="form-control" id="alergias" rows="3" placeholder="Escribe tus intolerancias o alergias alimentarias, si las tienes."></textarea>
-            </div>
-            <div class="mb-3">
-                <label for="plato" class="form-label">Plato Principal</label>
-                <select class="form-select" id="plato" required>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="alergias" class="form-label">Intolerancias o Alergias</label>
+                  <textarea class="form-control" id="alergias" rows="3" placeholder="Escribe tus intolerancias o alergias alimentarias, si las tienes."></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="plato" class="form-label">Plato Principal</label>
+                  <select class="form-select" id="plato" required>
                     <option value="carne">Carne</option>
                     <option value="pescado">Pescado</option>
-                </select>
-            </div>
-            <button type="submit" class="btn btn-primary">Confirmar</button>
-        </form>
-    </section>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Confirmar</button>
+              </form>
+            </section>
 
-    <!-- Footer -->
-    <footer class="bg-light text-center py-4">
-        <p>© 2025 Miguel & Ruth. Todos los derechos reservados.</p>
-    </footer>
+            <!-- Footer -->
+            <footer class="bg-light text-center py-4">
+              <p>© 2025 Miguel & Ruth. Todos los derechos reservados.</p>
+            </footer>
 
-    <!-- Vincula el archivo JS de Bootstrap 5 -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+            <!-- Vincula el archivo JS de Bootstrap 5 -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Script para el contador de cuenta regresiva -->
-    <script>
-        var countDownDate = new Date("2025-07-05T00:00:00").getTime();
-
-        var x = setInterval(function() {
-            var now = new Date().getTime();
-            var distance = countDownDate - now;
-
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-            + minutes + "m " + seconds + "s ";
-
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("countdown").innerHTML = "¡Es el gran día!";
-            }
-        }, 1000);
-    </script>
+            <!-- Script para el contador de cuenta regresiva -->
+            <script>
+              var countDownDate = new Date("2025-07-05T00:00:00").getTime();
+              var x = setInterval(function() {
+                var now = new Date().getTime();
+                var distance = countDownDate - now;
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                document.getElementById("countdown").innerHTML = days + "d " + hours + "h " +
+                  minutes + "m " + seconds + "s ";
+                if (distance < 0) {
+                  clearInterval(x);
+                  document.getElementById("countdown").innerHTML = "¡Es el gran día!";
+                }
+              }, 1000);
+            </script>
 </body>
+
 </html>
